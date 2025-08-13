@@ -1,0 +1,138 @@
+# Agentic AI Churn Prediction System - Environment Configuration
+# Copy this file to .env and fill in your actual values
+
+# =============================================================================
+# BigQuery Configuration
+# =============================================================================
+# Your Google Cloud Platform project ID
+GCP_PROJECT_ID=your-gcp-project-id
+
+# Path to your service account JSON file (optional - uses Application Default Credentials if not set)
+GOOGLE_APPLICATION_CREDENTIALS=path/to/your-service-account.json
+
+# =============================================================================
+# Looker Configuration
+# =============================================================================
+# Your Looker instance URL
+LOOKER_BASE_URL=https://your-instance.looker.com
+
+# Looker API credentials
+LOOKER_CLIENT_ID=your-client-id
+LOOKER_CLIENT_SECRET=your-client-secret
+
+# Alternative: Path to Looker configuration file
+# LOOKERSDK_CONFIG_FILE=path/to/looker.ini
+
+# =============================================================================
+# OpenAI Configuration
+# =============================================================================
+# Your OpenAI API key
+OPENAI_API_KEY=your-openai-api-key
+
+# =============================================================================
+# Slack Configuration
+# =============================================================================
+# Slack bot token (starts with xoxb-)
+SLACK_BOT_TOKEN=xoxb-your-bot-token
+
+# Slack channel ID where alerts should be sent
+SLACK_CHANNEL_ID=your-channel-id
+
+# =============================================================================
+# Jira Configuration
+# =============================================================================
+# Your Jira instance URL
+JIRA_URL=https://your-instance.atlassian.net
+
+# Jira username (usually your email)
+JIRA_USERNAME=your-email@company.com
+
+# Jira API token (not your password)
+JIRA_API_TOKEN=your-api-token
+
+# Jira project key for creating tickets
+JIRA_PROJECT_KEY=CUST
+
+# =============================================================================
+# SendGrid Configuration
+# =============================================================================
+# SendGrid API key
+SENDGRID_API_KEY=your-sendgrid-api-key
+
+# From email address for sending emails
+SENDGRID_FROM_EMAIL=noreply@yourcompany.com
+
+# =============================================================================
+# System Configuration
+# =============================================================================
+# Log level (DEBUG, INFO, WARNING, ERROR)
+LOG_LEVEL=INFO
+
+# Analysis interval in minutes (for scheduled mode)
+ANALYSIS_INTERVAL_MINUTES=60
+
+# Maximum number of customers to process per cycle (0 = unlimited)
+MAX_CUSTOMERS_PER_CYCLE=1000
+
+# Churn probability threshold for action (0.0 to 1.0)
+CHURN_PROBABILITY_THRESHOLD=0.7
+
+# Anomaly detection threshold (standard deviations)
+ANOMALY_THRESHOLD=2.0
+
+# =============================================================================
+# Optional: Advanced Configuration
+# =============================================================================
+# OpenAI model to use (gpt-4, gpt-3.5-turbo, etc.)
+OPENAI_MODEL=gpt-4
+
+# OpenAI temperature for reasoning (0.0 to 1.0)
+OPENAI_TEMPERATURE=0.1
+
+# BigQuery dataset name
+BIGQUERY_DATASET=your_dataset
+
+# BigQuery customers table name
+BIGQUERY_CUSTOMERS_TABLE=your_customers_table
+
+# BigQuery action logs table name
+BIGQUERY_ACTION_LOGS_TABLE=action_logs
+
+# Looker dashboard IDs for different alert types
+LOOKER_CHURN_DASHBOARD_ID=your-churn-dashboard-id
+LOOKER_ANOMALY_DASHBOARD_ID=your-anomaly-dashboard-id
+LOOKER_REVENUE_DASHBOARD_ID=your-revenue-dashboard-id
+
+# Looker Look IDs for KPIs
+LOOKER_MONTHLY_CHURN_LOOK_ID=your-monthly-churn-look-id
+LOOKER_CLV_LOOK_ID=your-clv-look-id
+LOOKER_REVENUE_CHURN_LOOK_ID=your-revenue-churn-look-id
+LOOKER_ACTIVE_CUSTOMERS_LOOK_ID=your-active-customers-look-id
+LOOKER_SUPPORT_TICKETS_LOOK_ID=your-support-tickets-look-id
+
+# =============================================================================
+# Security Configuration
+# =============================================================================
+# Enable SSL verification for API calls (true/false)
+ENABLE_SSL_VERIFICATION=true
+
+# API request timeout in seconds
+API_TIMEOUT_SECONDS=30
+
+# Maximum retries for API calls
+MAX_API_RETRIES=3
+
+# =============================================================================
+# Monitoring Configuration
+# =============================================================================
+# Enable detailed logging (true/false)
+ENABLE_DETAILED_LOGGING=true
+
+# Log file path
+LOG_FILE_PATH=agentic_ai_churn.log
+
+# Enable metrics collection (true/false)
+ENABLE_METRICS_COLLECTION=true
+
+# Metrics export interval in minutes
+METRICS_EXPORT_INTERVAL_MINUTES=15 
