@@ -14,7 +14,7 @@ import logging
 from typing import Dict, List, Optional, Any
 from datetime import datetime, timedelta
 import json
-from looker_sdk import models, error
+from looker_sdk import models40 as models, error
 from looker_sdk.rtl import transport
 from looker_sdk.rtl import api_methods
 from looker_sdk.rtl import auth_session
